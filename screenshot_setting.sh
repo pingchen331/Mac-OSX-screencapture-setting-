@@ -7,9 +7,9 @@ while [ $varKey -ne "4" ]
 do
 	clear
 	echo "=============screencapture location setting==========="
-	echo "(1)Change screencapture defualt saving location"
+	echo "(1)Change screencapture defualt saving PATH"
 	#echo "(1)更改預設儲存路徑"
-	echo "(2)Change screencapture default saving name"
+	echo "(2)Change screencapture default file name"
 	#echo "(2)更改檔案預設名稱"
 	echo "(3)Change screencapture default saving format"
 	#echo "(3)更改檔案預設儲存格式"
@@ -23,10 +23,10 @@ case $varKey in
 		#read defpath
 		defpath=`defaults read com.apple.screencapture location`
 		#echo "$defpath"
-		echo "Please enter the screencapture location:"
+		echo "Please enter the screencapture path:"
 		#echo "更改螢幕截圖預設儲存路徑："
 		echo "[defualt: $defpath] | [EXIT: Ｑ]"
-		read -p "Please enter or drag a directory here：" picpath
+		read -p "Please enter path or drag a directory here：" picpath
 		#read -p "請輸入路徑或直接拖拉資料夾：" picpath
 		defpath="/Users/$USER/Desktop"
 		#echo "$defaultpath"
@@ -48,7 +48,7 @@ case $varKey in
 		;;
 	2 )
 		echo ""
-		read -p "Please enter screencapture name you want[EXIT: Q]:" name
+		read -p "Please enter screencapture file name you want[EXIT: Q]:" name
 		if [ -z $name ];then
 			nowname=`defaults read com.apple.screencapture name`
 			echo "nothing changes, default screencapture name now is $nowname"

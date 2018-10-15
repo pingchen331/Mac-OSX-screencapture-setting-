@@ -3,5 +3,6 @@
 * clone it or download/unzip it
 	* get starting:
 		* ```bash screenshot_setting.sh``` in terminal
-	* or run screenshot_setting.command 
+	* or run screenshot_setting.command in GUI
+ 
 			
